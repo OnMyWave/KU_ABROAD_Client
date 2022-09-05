@@ -1,0 +1,93 @@
+idx,x,y,name,continent
+0,0.90239155,-6.9364853,National University of Singapore,asia
+1,-2.290329,-6.636377,University of Leeds,europe
+2,-2.7319963,-5.6033854,University of Texas at Austin,northamerica
+3,-2.7856455,-3.2954202,Sciences Po,europe
+4,-3.9640305,-2.613315,University of Calgary,northamerica
+5,-3.1607385,-4.173466,University of Helsinki,europe
+6,-2.8625255,-4.6544757,University of Amsterdam,europe
+7,-4.007782,-6.4973,University of Wisconsin-Madison,northamerica
+8,0.07884018,-5.8034286,University of British Columbia,northamerica
+9,-2.9021065,-5.45272,University of Nottingham,europe
+10,-5.6054735,-4.5223727,"California State University, Fullerton",northamerica
+11,-4.5809765,-4.1393166,Arizona State University,northamerica
+12,-1.5563017,-5.1598926,University at Buffalo,northamerica
+13,-3.8672984,-4.017972,Uppsala University,europe
+14,-3.382815,-3.9235482,King_ College London,europe
+15,-3.683144,-6.2104087,Venice International University,europe
+16,-5.2702246,-4.968905,Eberhard Karls Universitt Tuebingen,europe
+17,-3.2276187,-6.164795,University of Birmingham,europe
+18,-4.1983037,-5.4773607,University of Melbourne,oceania
+19,-1.2554002,-5.919885,University of Glasgow,europe
+20,-5.1412196,-5.6046624,Chapman University,northamerica
+21,-2.686041,-5.9912863,University of Illinois at Urbana-Champaign,northamerica
+22,-1.0624608,-6.4535003,University of Connecticut,northamerica
+23,-0.25412673,-5.672233,The University of Sydney,oceania
+24,-3.7213354,-3.596519,University of Hawaii at Manoa,northamerica
+25,-2.2170334,-4.3583484,University of Sussex,europe
+26,-0.5196824,-6.7467046,Simon Fraser University,northamerica
+27,-3.3738697,-3.926644,"SOAS, University of London",europe
+28,-2.4743464,-6.812848,Mcgill University,northamerica
+29,-3.096999,-5.0414205,Universidad de Navarra,europe
+30,-4.1353426,-5.520065,Monash University,oceania
+31,-3.3619206,-6.5281196,University of Tours,europe
+32,-3.851067,-5.0203876,University of Mannheim,europe
+33,-2.2714763,-3.7982244,Erasmus University Rotterdam,europe
+34,-2.0924995,-3.517599,The University of Sheffield,europe
+35,-2.2873158,-6.813598,University of Maryland,northamerica
+36,-2.9735005,-3.0951197,University of Kent,europe
+37,-0.16310701,-6.4077697,The University of Hong Kong,asia
+38,-5.2180214,-3.1559184,Universidad de Lima,southamerica
+39,-1.585983,-4.267929,University of Pittsburgh,northamerica
+40,0.6542136,-5.898469,Waseda University,asia
+41,-3.8632424,-4.583515,Lund University,europe
+42,-3.8448946,-6.0135508,Leiden University,europe
+43,-3.2494028,-5.3463435,University of Queensland,oceania
+44,-3.3746185,-2.7401373,University of Copenhagen,europe
+45,1.04177,-5.9928274,National Taiwan University,asia
+46,-1.6082808,-5.0689664,Victoria University of Wellington,oceania
+47,-4.2632656,-3.616933,Renmin University,asia
+48,-3.9453914,-2.4811752,University of Warsaw,europe
+49,-2.4276948,-2.884854,Tec de Monterrey,southamerica
+50,-5.359417,-5.344822,Witten/Herdecke University,europe
+51,-5.6082015,-5.7658696,University of Regensburg,europe
+52,0.9024994,-6.9338193,Nanyang Technological University,asia
+53,-4.0699496,-3.8627224,Universidad Autonoma de Madrid,europe
+54,-4.436626,-3.384592,Charles University,europe
+55,-3.1516507,-6.7786393,University of Kansas,northamerica
+56,-3.899053,-6.193298,University of Gothenburg,europe
+57,-3.2433338,-6.152934,Aston University,europe
+58,-3.0094128,-6.6026134,Queen's College,northamerica
+59,-2.5455718,-6.4424915,University of Cincinnati,northamerica
+60,-2.583742,-4.531586,Bonn University,europe
+61,-4.0813217,-5.411355,Halmstad University,europe
+62,-5.5456448,-5.0585704,Freie Universitaet Berlin,europe
+63,-1.211133,-4.705029,University of North Carolina at Chapel Hill,northamerica
+64,-1.6319236,-4.061301,Universita Cattolica del Sacro Cuore,europe
+65,0.44082135,-5.881474,Meiji University,asia
+66,-1.0014738,-5.787965,Universidad de Deusto,europe
+67,-3.0117085,-4.6046333,Vrije Universiteit Amsterdam,europe
+68,-1.604472,-6.0706887,University of Missouri Columbia,northamerica
+69,-0.4289116,-6.2485976,University of Mississippi (ISEP),northamerica
+70,-1.127311,-5.4743667,University of Massachusetts Boston (UMass Boston),northamerica
+71,-0.4113548,-5.348021,University of Agder (Universitetet i Agder),europe
+72,-2.0207996,-2.8362117,Universidad Panamericana Campus Guadalajara,southamerica
+73,-2.0232596,-2.8308673,Universidad de Guadalajara,southamerica
+74,-0.16310747,-6.4077663,The Chinese University of HongKong,asia
+75,-0.60442865,-3.0640678,Technical University of Munich ,europe
+76,-4.550257,-6.2133474,Shandong University,asia
+77,-1.5324908,-3.6769357,Salzburg University of Applied Sciences,europe
+78,-3.0062075,-2.6148129,saint-petersburg university,europe
+79,-5.3416176,-5.243857,Otto-Friedrich-Universitt Bamberg,europe
+80,-4.384634,-3.010085,Georg-August-Universitt Gttingen,europe
+81,0.43405777,-5.3259525,Doshisha University,asia
+82,-4.415705,-6.1376605,Moscow State University,europe
+83,-0.1631052,-6.407775,City University of HongKong,asia
+84,0.53050613,-3.7053146,Nagoya University,asia
+85,-2.2443058,-2.767521,Universidad de Colima,southamerica
+86,0.44991368,-5.923773,Seikei University,asia
+87,0.44605228,-5.9259086,Hitotsubashi University,asia
+88,-4.6230893,-4.0350623,California State University,northamerica
+89,-0.74758875,-4.212432,University of Zurich,europe
+90,-4.2595253,-3.6152735,Peking University,asia
+91,0.46048692,-3.6549416,Ochanomizu University,asia
