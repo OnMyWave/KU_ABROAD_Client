@@ -18,7 +18,48 @@
 - ‘선배들의 한 마디’ 데이터를 통해 많은 양의 수기 데이터 정보를 정리, 학교의 특징이나 추천 여행지를 제공하여 문제점으로 제시되던 경험자들과의 소통부재 문제를 해결했다.
 - 본인이 기준을 선정하여 학교를 추천받아 보다 적합한 교환학교 선택에 도움을 준다.
 
+# Data-Analysis
+본 서비스에서 제공하려는 정보를 제작자 임의로 선정하는 것이 아니라 선배들의 경험보고서에서 많이 언급하고, 필요로 했던 정보를 서비스하기 위해 Natural Language Processing을 진행하였다. 
+
+## Data Preprocessing
+
+### Web Crawling
+고려대학교 국제처에서는 18년 이후 경험보고서를 웹에서 다운로드 할 수 있게 제공하는데 이는 총 2000개에 달하기 때문에 다운로드 작업을 selenium을 통해 자동화 하였다.
+### Hwp to PDF
+경험보고서 파일의 형식은 PDF, HWP가 혼재되어 있다. 자연어 추출을 쉽게 하기 위해 PDF 파일 형식으로 통일
+### READ_PDF 
+PDF에서 자연어만 추출
+### PDF_Regex 
+경험보고서 항목에 따라 자연어 데이터를 분리
+### Str_to_Excel 
+추후 분석에 용이하기 위해 추출한 자연어 데이터를 엑셀에 저장
+
+## NLP
+### Tokenize : Mecab
+문장 성분을 형태소에 따라 토큰화 <br><br>
+*Mecab이란 ? 
+- Konlpy에서 지원하는 한글 토큰화 라이브러리
+- Kkma, Okt에 비해 빠른 속도를 가지고 있고, 준수한 정확도를 가지고 있음
+
+### get_nouns 
+문장 성분 중 명사만 추출
+
+### 불용어 처리
+경험보고서 특성 상 발생하는 단어들 ( 고려, 대학교, 고려대학교, 외국, 경험, 보고서 등)을 제거하는 작업
+
+### WordCloud
+경험보고서에 어떤 단어가 많이 등장했는지 한 눈에 확인하기 위해 WordCloud 시행
+
+### Topic Modelling : LDA ( Latent Dirichlet Allocation )
+어떤 주제들이 경험보고서에 분포했는지 LDA를 통해 알아봄.
+
+## Frontend
+### 디자인툴 : Figma
+### 프레임워크 : Vue.js 사용
+
+
 ## Backend
 ### 설명 및 코드 : https://github.com/OnMyWave/KU_ABROAD
 
-## Data-Analysis
+
+
