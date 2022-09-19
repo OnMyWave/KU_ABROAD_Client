@@ -48,6 +48,11 @@
         <div class="center">
           <span class="box_msg">{{ crime[this.data.crime_idx - 1] }}</span>
         </div>
+        <div class="tooltip information_icon s">
+          <span class="tooltiptext tooltip-left"
+            >제공되는 학교들의 상대적인 안전도를 뜻합니다.</span
+          >
+        </div>
       </div>
       <div class="box">
         <div class="flexbox">
@@ -143,7 +148,7 @@
         <div class="small_box">
           <span class="small_box_msg">[1년 파견]</span>
           <div class="box_item">
-            <span class="small_box_msg k"
+            <span class="small_box_msg"
               >1년 파견 {{ poss[data.one_year] }}</span
             >
           </div>
@@ -169,6 +174,11 @@
         <span class="box_title">물가</span>
         <div class="center">
           <span class="box_msg">{{ living[data.living_idx - 1] }}</span>
+        </div>
+        <div class="tooltip information_icon t">
+          <span class="tooltiptext tooltip-left"
+            >제공되는 학교들의 상대적인 물가를 뜻합니다.</span
+          >
         </div>
       </div>
       <div class="box">
@@ -439,7 +449,7 @@ export default {
 .small_box_msg {
   margin-left: 3%;
   margin-top: 1%;
-  width: 180px;
+  width: 170px;
   height: 40px;
   font-weight: normal;
 }
@@ -533,9 +543,6 @@ export default {
 .red.x {
   font-size: 15px;
 }
-.small_box_msg.k {
-  width: 200px;
-}
 .container {
   background-color: rgba(255, 255, 255, 1);
   width: 1440px;
@@ -559,7 +566,7 @@ export default {
   width: 918px;
   height: 130px;
   position: absolute;
-  left: 258px;
+  left: 260px;
   top: 450px;
   z-index: 2;
   display: flex;
@@ -600,7 +607,7 @@ export default {
   margin-top: 3%;
 }
 .empty_box.f {
-  margin-top: 65px;
+  margin-top: 50px;
 }
 .empty_box.t {
   height: 150px;
@@ -868,5 +875,56 @@ a {
 }
 .box_title.score {
   font-size: 22px;
+}
+.information_icon {
+  margin-top: 10px;
+  margin-left: 240px;
+  width: 16px;
+  height: 16px;
+  background-image: url(../assets/information_icon.png);
+}
+.information_icon.s {
+  margin-top: 56.766px;
+}
+.information_icon.t {
+  margin-top: 56.766px;
+}
+.tooltip {
+  position: relative;
+  display: block;
+}
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: white;
+  color: black;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px;
+  border: 1px solid black;
+  position: absolute;
+  z-index: 1;
+  margin-right: 3px;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+.tooltip .tooltiptext::after {
+  content: ' ';
+  position: absolute;
+  border-style: solid;
+  border-width: 5px;
+}
+.tooltip .tooltip-left {
+  top: -5px;
+  right: 105%;
+}
+
+.tooltip .tooltip-left::after {
+  top: 50%;
+  left: 100%;
+  margin-top: -30px;
+  border-color: transparent transparent transparent black;
 }
 </style>

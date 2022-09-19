@@ -2,11 +2,15 @@
   <div class="container">
     <div class="intro">
       <span class="intro_msg1">선호하는 날씨를 알려주세요!</span>
-      <span class="intro_msg2">서울을 기준으로 생각하면 편해요! :)</span>
     </div>
     <div class="boxwrapper 1">
       <div class="box">
-        <div class="box_image">
+        <div
+          class="box_image"
+          v-on:mouseover="mouseover"
+          v-on:mouseleave="mouseleave"
+          value="A1"
+        >
           <button
             class="hothumid"
             value="A1"
@@ -21,12 +25,17 @@
             :disabled="!clicks[0] && clicked"
             @click="click"
           >
-            ☀️싱가포르 같은 날씨💦
+            {{ mouseovermsg[0] }}
           </button>
         </div>
       </div>
       <div class="box">
-        <div class="box_image">
+        <div
+          class="box_image"
+          v-on:mouseover="mouseover"
+          v-on:mouseleave="mouseleave"
+          value="B1"
+        >
           <button
             class="warmhumid"
             value="B1"
@@ -40,11 +49,16 @@
           :disabled="!clicks[1] && clicked"
           @click="click"
         >
-          🌤서울 같은 날씨💧
+          {{ mouseovermsg[1] }}
         </button>
       </div>
       <div class="box">
-        <div class="box_image">
+        <div
+          class="box_image"
+          v-on:mouseover="mouseover"
+          v-on:mouseleave="mouseleave"
+          value="C1"
+        >
           <button
             class="coolhumid"
             value="C1"
@@ -58,11 +72,16 @@
           :disabled="!clicks[2] && clicked"
           @click="click"
         >
-          💨런던 같은 날씨🌧
+          {{ mouseovermsg[2] }}
         </button>
       </div>
       <div class="box">
-        <div class="box_image">
+        <div
+          class="box_image"
+          v-on:mouseover="mouseover"
+          v-on:mouseleave="mouseleave"
+          value="D1"
+        >
           <button
             class="coldhumid"
             value="D1"
@@ -76,13 +95,18 @@
           :disabled="!clicks[3] && clicked"
           @click="click"
         >
-          ❄️퀘벡 같은 날씨💦
+          {{ mouseovermsg[3] }}
         </button>
       </div>
     </div>
     <div class="boxwrapper 2">
       <div class="box">
-        <div class="box_image">
+        <div
+          class="box_image"
+          v-on:mouseover="mouseover"
+          v-on:mouseleave="mouseleave"
+          value="A2"
+        >
           <button
             class="hotdry"
             value="A2"
@@ -96,11 +120,16 @@
           :disabled="!clicks[4] && clicked"
           @click="click"
         >
-          ☀️애리조나 같은 날씨🌵
+          {{ mouseovermsg[4] }}
         </button>
       </div>
       <div class="box">
-        <div class="box_image">
+        <div
+          class="box_image"
+          v-on:mouseover="mouseover"
+          v-on:mouseleave="mouseleave"
+          value="B2"
+        >
           <button
             class="warmdry"
             value="B2"
@@ -114,11 +143,16 @@
           :disabled="!clicks[5] && clicked"
           @click="click"
         >
-          🌤캘리포니아 같은 날씨🍃
+          {{ mouseovermsg[5] }}
         </button>
       </div>
       <div class="box">
-        <div class="box_image">
+        <div
+          class="box_image"
+          v-on:mouseover="mouseover"
+          v-on:mouseleave="mouseleave"
+          value="C2"
+        >
           <button
             class="cooldry"
             value="C2"
@@ -132,11 +166,16 @@
           :disabled="!clicks[6] && clicked"
           @click="click"
         >
-          💨동유럽 같은 날씨🍂
+          {{ mouseovermsg[6] }}
         </button>
       </div>
       <div class="box">
-        <div class="box_image">
+        <div
+          class="box_image"
+          v-on:mouseover="mouseover"
+          v-on:mouseleave="mouseleave"
+          value="D2"
+        >
           <button
             class="colddry"
             value="D2"
@@ -150,7 +189,7 @@
           :disabled="!clicks[7] && clicked"
           @click="click"
         >
-          ❄️북유럽 같은 날씨🌲
+          {{ mouseovermsg[7] }}
         </button>
       </div>
     </div>
@@ -167,7 +206,10 @@ export default {
       case: [],
       wlevel: '',
       clicks: [false, false, false, false, false, false, false, false],
-      clicked: false
+      clicked: false,
+      mouseover: false,
+      mouseleave: true,
+      pmouse: ''
     }
   },
   setup() {},
@@ -176,6 +218,113 @@ export default {
     this.case = JSON.parse(sessionStorage.getItem('case'))
   },
   unmounted() {},
+  watch: {},
+  computed: {
+    mouseovermsg() {
+      if (this.mouseover == true) {
+        if (this.pmouse == 'A1') {
+          return [
+            '온도:24.5℃ 강수량:205mm',
+            '🌤서울 같은 날씨💧',
+            '💨런던 같은 날씨🌧',
+            '❄️퀘벡 같은 날씨💦',
+            '☀️애리조나 같은 날씨🌵',
+            '🌤캘리포니아 같은 날씨🍃',
+            '💨동유럽 같은 날씨🍂',
+            '❄️북유럽 같은 날씨🌲'
+          ]
+        } else if (this.pmouse == 'A2') {
+          return [
+            '☀️싱가포르 같은 날씨💦',
+            '🌤서울 같은 날씨💧',
+            '💨런던 같은 날씨🌧',
+            '❄️퀘벡 같은 날씨💦',
+            '온도:28℃ 강수량:27mm',
+            '🌤캘리포니아 같은 날씨🍃',
+            '💨동유럽 같은 날씨🍂',
+            '❄️북유럽 같은 날씨🌲'
+          ]
+        } else if (this.pmouse == 'B1') {
+          return [
+            '☀️싱가포르 같은 날씨💦',
+            '온도:18℃ 강수량:170mm',
+            '💨런던 같은 날씨🌧',
+            '❄️퀘벡 같은 날씨💦',
+            '☀️애리조나 같은 날씨🌵',
+            '🌤캘리포니아 같은 날씨🍃',
+            '💨동유럽 같은 날씨🍂',
+            '❄️북유럽 같은 날씨🌲'
+          ]
+        } else if (this.pmouse == 'B2') {
+          return [
+            '☀️싱가포르 같은 날씨💦',
+            '🌤서울 같은 날씨💧',
+            '💨런던 같은 날씨🌧',
+            '❄️퀘벡 같은 날씨💦',
+            '☀️애리조나 같은 날씨🌵',
+            '온도:12℃ 강수량:10mm',
+            '💨동유럽 같은 날씨🍂',
+            '❄️북유럽 같은 날씨🌲'
+          ]
+        } else if (this.pmouse == 'C1') {
+          return [
+            '☀️싱가포르 같은 날씨💦',
+            '🌤서울 같은 날씨💧',
+            '온도:7.5℃ 강수량:70mm',
+            '❄️퀘벡 같은 날씨💦',
+            '☀️애리조나 같은 날씨🌵',
+            '🌤캘리포니아 같은 날씨🍃',
+            '💨동유럽 같은 날씨🍂',
+            '❄️북유럽 같은 날씨🌲'
+          ]
+        } else if (this.pmouse == 'C2') {
+          return [
+            '☀️싱가포르 같은 날씨💦',
+            '🌤서울 같은 날씨💧',
+            '💨런던 같은 날씨🌧',
+            '❄️퀘벡 같은 날씨💦',
+            '☀️애리조나 같은 날씨🌵',
+            '🌤캘리포니아 같은 날씨🍃',
+            '온도:7℃ 강수량:35mm',
+            '❄️북유럽 같은 날씨🌲'
+          ]
+        } else if (this.pmouse == 'D1') {
+          return [
+            '☀️싱가포르 같은 날씨💦',
+            '🌤서울 같은 날씨💧',
+            '💨런던 같은 날씨🌧',
+            '온도:0℃ 강수량:95mm',
+            '☀️애리조나 같은 날씨🌵',
+            '🌤캘리포니아 같은 날씨🍃',
+            '💨동유럽 같은 날씨🍂',
+            '❄️북유럽 같은 날씨🌲'
+          ]
+        } else if (this.pmouse == 'D2') {
+          return [
+            '☀️싱가포르 같은 날씨💦',
+            '🌤서울 같은 날씨💧',
+            '💨런던 같은 날씨🌧',
+            '❄️퀘벡 같은 날씨💦',
+            '☀️애리조나 같은 날씨🌵',
+            '🌤캘리포니아 같은 날씨🍃',
+            '💨동유럽 같은 날씨🍂',
+            '온도:1℃ 강수량:45mm'
+          ]
+        }
+      } else if (this.mouseover == false) {
+        return [
+          '☀️싱가포르 같은 날씨💦',
+          '🌤서울 같은 날씨💧',
+          '💨런던 같은 날씨🌧',
+          '❄️퀘벡 같은 날씨💦',
+          '☀️애리조나 같은 날씨🌵',
+          '🌤캘리포니아 같은 날씨🍃',
+          '💨동유럽 같은 날씨🍂',
+          '❄️북유럽 같은 날씨🌲'
+        ]
+      }
+    }
+  },
   methods: {
     next() {
       if (this.wlevel !== '' && this.clicked === true) {
@@ -211,6 +360,14 @@ export default {
         this.clicked = !this.clicked
       }
       this.wlevel = event.target.value
+    },
+    mouseover(event) {
+      this.pmouse = event.target.value
+      this.mouseover = true
+    },
+    mouseleave() {
+      this.pmouse = ''
+      this.mouseover = false
     }
   }
 }
